@@ -24,7 +24,7 @@ namespace BL_Day6LogicalProgramming
                 for (int i = 3; i <= n; i++)
                 {
                     num = num1 + num2;
-                    Console.Write("{0} ", num);
+                    Console.Write("{0}\t", num);
                     num1 = num2;
                     num2 = num;
                 }

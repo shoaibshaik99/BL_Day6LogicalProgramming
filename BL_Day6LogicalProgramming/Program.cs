@@ -1,9 +1,13 @@
-﻿namespace BL_Day6LogicalProgramming
+﻿using System.Diagnostics;
+
+namespace BL_Day6LogicalProgramming
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             Console.WriteLine("Select a program to run");
             Console.WriteLine("1.Fibonacci Series\n2.Perfect Number\n3.Is it prime?\n4.Reverse a number\n5.Coupon Numbers");
             int option = Convert.ToInt32(Console.ReadLine());
@@ -30,7 +34,8 @@
                     Console.WriteLine("Incorrect input, program ends here");
                     break;
             }
-
+            stopwatch.Stop();
+            Console.Write("\nElased time in milliseconds: {0}", stopwatch.ElapsedMilliseconds);
         }
     }
 }
