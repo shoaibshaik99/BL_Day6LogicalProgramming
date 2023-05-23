@@ -28,7 +28,9 @@ namespace BL_Day6LogicalProgramming
                 r = random.Next(1, noOfCoupons + 1);
                 countOfIterations++;
                 //Console.WriteLine(countOfIterations + ", " + r);
-                for (int i = 0; i < noOfCoupons/*<=countOfDistinct*/; i++)
+                
+                //checking if the number has occured before
+                for (int i = 0; i <= countOfDistinct /*< noOfCoupons*/; i++)
                 {
                     if (couponNumbers[i] == r)
                     {
@@ -44,10 +46,14 @@ namespace BL_Day6LogicalProgramming
                 countOfDistinct++;
             }
             Console.WriteLine("Total number of iterations requried to generate {0} distinct numbers are {1}", noOfCoupons, countOfIterations);
-            Console.WriteLine("Here is the respective array generated:\n");
+            Console.WriteLine("Here is the respective array generated:");
             for (int i = 0;i < noOfCoupons; i++)
             {
-                Console.Write(couponNumbers[i] + " ");
+                if (i != 0 && i % 10 == 0)
+                {
+                    Console.WriteLine();
+                }
+                Console.Write(couponNumbers[i] + "\t");
             }
         }
     }
