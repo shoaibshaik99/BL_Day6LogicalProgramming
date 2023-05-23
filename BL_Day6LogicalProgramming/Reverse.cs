@@ -21,7 +21,7 @@ namespace BL_Day6LogicalProgramming
                 reverse = reverse * 10 + n % 10;
                 n = n / 10;
             }
-            Console.WriteLine("Here is the reversed nu  mber: {0}",reverse);
+            Console.WriteLine("Here is the reversed number: {0}",reverse);
         }
         public static /*void */ string ReverseString(string s)
         {
@@ -42,7 +42,7 @@ namespace BL_Day6LogicalProgramming
             return reverse;
         }
 
-        public static void ReverseEachWordAtItsSameInString()
+        public static void ReverseEachWordAtItsPositionInString()
         {
             Console.WriteLine("Enter a sentence to reverse each word of the sentence");
             string s = Console.ReadLine();
