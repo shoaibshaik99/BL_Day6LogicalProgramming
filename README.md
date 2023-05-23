@@ -1,0 +1,2 @@
+# BL_Day6LogicalProgramming
+BridgeLabz Assignment
